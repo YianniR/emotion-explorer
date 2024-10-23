@@ -298,9 +298,8 @@ export default function EmotionFinder() {
   };
 
   const calculateEmotionMatches = (currentAnswers) => {
-    let matches = [];
-    
-    Object.entries(emotions).forEach(([key, emotion]) => {
+    const matches = []; // instead of let matches = [];
+    Object.entries(emotions).forEach(([_, emotion]) => {
       let score = 0;
       let maxScore = 0;
       
@@ -454,7 +453,7 @@ export default function EmotionFinder() {
                   Your Emotional Landscape
                 </h2>
                 <p className="text-gray-600">
-                  Based on your responses, here's a detailed view of what you might be feeling
+                  Based on your responses, here&apos;s a detailed view of what you might be feeling
                 </p>
               </div>
 
